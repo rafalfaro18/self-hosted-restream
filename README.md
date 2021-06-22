@@ -17,3 +17,7 @@ push rtmp://live.twitch.tv/app/${STREAM_KEY_TWITCH};
 push rtmp://a.rtmp.youtube.com/live2/${STREAM_KEY_YOUTUBE};
 ```
 9.  (Optional) If you add more environment variables like the variable STREAM_KEY_YOUTUBE in step 8, add them to your [.env](./.env.example) file below the twitch stream key environment variable.
+
+## Example Usage
+
+- I have a computer with a dedicated connection just for streaming and another computer with its own connection just for online gaming, but I don't have a capture card to plug the gaming computer to the streaming computer. So I also connect the gaming computer to the same network that the streaming computer uses but the gaming computer just uses this connection as a secondary connection to connect to the streaming computer not for internet connectivity. So I run this project in the streaming computer and OBS in the gaming computer, but instead of streaming to twitch directly I stream via LAN to the streaming computer running this project which forwards the stream to twitch via its own dedicated internet conneection so the gaming traffic and the streaming traffic go out via different connection, there're plenty of better ways to do this but this is one use case. In my case I just have one connection with good speed for streaming, the other one is only good for gaming. If I try to do both things from either of those connections the upload bandwith is not enough.
