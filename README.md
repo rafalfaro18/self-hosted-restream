@@ -11,7 +11,7 @@ Restream self hosted alternative
 5.  Start the stream on OBS.
 6.  Go to your twitch profile, you should see a stream with the same content that you're streaming to the computer running the docker container. It's being forwarded.
 7.  (Optional) You can watch the stream locally from VLC opening a stream with this url `rtmp://localhost/stream/hello`.
-8.  (Optional) You can also stream to other services like youtube, just add tem below twitch in [nginx.conf](./nginx.conf):
+8.  (Optional) You can also stream to other services (I think even other accounts of the same platform but I haven't tested this yet) like youtube, just add tem below twitch in [nginx.conf](./nginx.conf):
 ```
 push rtmp://live.twitch.tv/app/${STREAM_KEY_TWITCH};
 push rtmp://a.rtmp.youtube.com/live2/${STREAM_KEY_YOUTUBE};
